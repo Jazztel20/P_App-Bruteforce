@@ -1,0 +1,8 @@
+choisir une cible:
+- db
+- site web/http/ftp/ssh
+Pour voir que ça prend plus de temps, genre avec les hash (calcul, comparaison de hash, etc...)
+
+
+
+mdp: un certain nombre de caractère (12, 14, etc...) -> voir combien de temps ça prend pour cracker
