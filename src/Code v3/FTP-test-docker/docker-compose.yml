@@ -4,7 +4,7 @@ services:
   ftp:
     image: stilliard/pure-ftpd:latest
     container_name: ftp-test
-    restart: always
+    restart: unless-stopped
     environment:
       PUBLICHOST: "127.0.0.1"
       FTP_USER_NAME: "admin"
@@ -13,5 +13,3 @@ services:
     ports:
       - "21:21"
       - "30000-30009:30000-30009"
-    volumes:
-      - ./ftp-data:/home/admin
