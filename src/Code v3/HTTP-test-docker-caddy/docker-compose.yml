@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    image: caddy:2
+    container_name: http-test
+    ports:
+      - "8080:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+    restart: unless-stopped
