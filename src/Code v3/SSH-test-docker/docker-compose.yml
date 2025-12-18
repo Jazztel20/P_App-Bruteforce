@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  ssh:
+    image: linuxserver/openssh-server:latest
+    container_name: ssh-test
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Zurich
+      - USER_NAME=admin
+      - USER_PASSWORD=wed892000
+      - PASSWORD_ACCESS=true
+      - SUDO_ACCESS=false
+    ports:
+      - "2222:2222"
+    restart: unless-stopped
